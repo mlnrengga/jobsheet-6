@@ -14,11 +14,18 @@ public static void main(String[] args) {
     totalSudut = sudut1 + sudut2 + sudut3;
 
     if (totalSudut == 180) {
-        if ((sudut1 == 90) || (sudut2 == 90) || (sudut3 == 90)) 
+        if ((sudut1 == 90) || (sudut2 == 90) || (sudut3 == 90)) {
             System.out.println("Segitiga Tersebut Adalah Segitiga Siku Siku");
-        else 
-            System.out.println("Segitiga Tersebut Adalah Bukan Segitiga Siku Siku"); 
-        }
+        }else if ((sudut1 == sudut2) || (sudut1 == sudut3) || (sudut2 == sudut3)) {
+            System.out.println("Segitiga Tersebut Adalah Segitiga Sama Kaki");
+        }else if ((sudut1 == sudut2) && (sudut1 == sudut3)) {
+            System.out.println("Segitiga Tersebut Adalah Segitiga Sama Sisi");
+        }else{ 
+            System.out.println("Segitiga Tersebut Adalah Segitiga Sembarang");
+        } 
+        }else
+        System.out.println("Bukan Segitiga");
+        
         input15.close();  
 }
 }
